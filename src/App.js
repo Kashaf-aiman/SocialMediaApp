@@ -12,7 +12,7 @@ const App = () => {
         if(!user) navigate('/login');
     },[])
     return (
-        <GoogleOAuthProvider clientId='455717876948-3182p2mgt2u7l7610doj0ei32puuhqo9.apps.googleusercontent.com' >
+        <GoogleOAuthProvider clientId ={process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN} >
         <Routes>
             <Route path="login" element={<Login />} />
             <Route path="/*" element={<Home />} />
